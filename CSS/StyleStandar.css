@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-areas: "left   center  right";
+  width: 100%;
+  height: 100vh;
+  gap: 0.5rem;
+}
+
+.section_left {
+  grid-area: left;
+  background-color: #676767;
+}
+
+.section_center {
+  grid-area: center;
+  background-color: rgba(128, 128, 128, 0.8588235294);
+}
+
+.section_right {
+  grid-area: right;
+  background-color: #676767;
+}
+
+/*Este CSS es un ESTANDAR para aplicar en todas las paginas si se desea*/
+/*Se le agrega colo al cuerpo para diferenciarlo por el momento*/
+body {
+  background-color: black;
+}
+
+/*Se establece unos bordes a los principales pilares de la pagina*/
+.section_left,
+.section_center,
+.section_right {
+  border: 0.3rem solid white;
+}
+
+/*Se divide el contenido principal en navegador-contenido-pieDePagina*/
+.section_center {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 15% auto 7%;
+  grid-template-areas: "nav" "content" "footer";
+  /*Se crea el menu principal de todas la paginas*/
+}
+.section_center .navegator,
+.section_center .centre_contents,
+.section_center .footer {
+  border: 0.2rem solid rgb(0, 0, 0);
+}
+.section_center .navegator {
+  grid-area: nav;
+  display: grid;
+  grid-template-rows: 70% 30%;
+  grid-template-areas: "title" "menu";
+  padding: 1rem 1rem 0.2rem 1rem;
+}
+.section_center .navegator .title {
+  grid-area: title;
+  font-size: 3rem;
+  color: #7f0909;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.section_center .navegator ul {
+  grid-area: menu;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+}
+.section_center .navegator ul .list {
+  grid: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  font-size: 1.2rem;
+  color: rgb(234, 234, 234);
+  text-decoration: none;
+  margin: 0rem 1rem;
+  padding: 0rem 0.1rem;
+}
+.section_center .center_contents {
+  grid-area: content;
+}
+.section_center .footer {
+  grid-area: footer;
+}/*# sourceMappingURL=StyleStandar.css.map */
