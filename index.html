@@ -5,73 +5,331 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/StyleStandar.css">
-    <link rel="stylesheet" href="./CSS/style.css">
     <title>Principal</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./CSS/Standar.css">
+    <link rel="stylesheet" href="./CSS/PrincipalStyle.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.3/iconify-icon.min.js"></script>
+
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+
 </head>
 
-<body class="container">
-    <!--Seccion central-->
-    <section class="section_center">
-        <!--Barra de navegación-->
-        <nav class="navegator">
-            <div class="title">
-                <h1>Titulo de la pagina</h1>
-            </div>            
-            <ul>
-                <li> <a class="list" href="index.html">HOME</a></li>
-                <li> <a class="list" href="./HTMLs/sheet1.html">TEXTO 1</a></li>
-                <li> <a class="list" href="./HTMLs/sheet2.html">TEXTO 2</a></li>
-                <li> <a class="list" href="./HTMLs/sheet3.html">TEXTO 3</a></li>
-                <li> <a class="list" href="./HTMLs/sheet4.html">TEXTO 4</a></li>
-            </ul>
-        </nav>
-        <!--Contenido-->
-        <section class="centre_contents">
-                <article class="article_center_1">
-                    <img class="imag_1"  src="./imagenes/Ejemplo.png" alt="Se carga una foto 1">
-                    <div class="paragraph_1">
-                        <p>Lorem ipsum dolor sit amet consectetur. Lacus sit ac pulvinar tellus. Sollicitudin egestas
-                            amet mus gravida. In vel volutpat at nisl. Mattis mi diam commodo condimentum velit
-                            pellentesque pellentesque. Praesent pulvinar iaculis mi.
-                        </p>
+<body>
+    <!-- <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="./imagenes/Editadas/IronMaiden/Killer.jpg" class="d-block w-100" alt="Iron Maiden">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Inicio</h1>
+                    <p>Bienvenido</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="./imagenes/Editadas/Megadeth/killingIsMyBusinees.png" class="d-block w-100" alt="Megadeth">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Inicio</h1>
+                    <p>Bienvenido</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./imagenes/Editadas/Megadeth/Rattlehead.jpg" class="d-block w-100" alt="Medageth">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Inicio</h1>
+                    <p>Bienvenido</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div> -->
+    <header class="carrusel">
+        <section id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="./imagenes/Editadas/IronMaiden/Killer.jpg" width="100" class="d-block w-100"
+                        alt="Iron Maiden">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Inicio</h1>
+                        <p>Bienvenido</p>
                     </div>
-                </article>
-                <article class="article_center_2">
-                    <div class="c_imag_2">
-                        <img class="imag_2"  src="./imagenes/Ejemplo.png" alt="Se carga una foto 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="./imagenes/Editadas/Megadeth/PeaceSells.jpg" width="100" class="d-block w-100"
+                        alt="Megadeth">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Inicio</h1>
+                        <p>Bienvenido</p>
                     </div>
-                      <div class="paragraph_2">
-                        <p>Lorem ipsum dolor sit amet consectetur. Lacus sit ac pulvinar tellus. Sollicitudin egestas
-                            amet mus gravida. In vel volutpat at nisl. Mattis mi diam commodo condimentum velit
-                            pellentesque pellentesque. Praesent pulvinar iaculis mi.
-                        </p>
+                </div>
+                <div class="carousel-item">
+                    <img src="./imagenes/Editadas/Metallica/Just for all.jpg" width="100" class="d-block w-100"
+                        alt="Medageth">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Inicio</h1>
+                        <p>Bienvenido</p>
                     </div>
-                </article>
+                </div>
+                <div class="carousel-item">
+                    <img src="./imagenes/Editadas/Death/ScreamBlodyGore.jpg" width="100" class="d-block w-100"
+                        alt="Medageth">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Inicio</h1>
+                        <p>Bienvenido</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </section>
-        <!-- Contenido
-        <aside>
+    </header>
 
-        </aside> -->
+
+    <section class="container">
+        <nav class="navegator">
+            <div class="logo">
+                <img src="./imagenes/Editadas/Icons/IconSite.png" alt="Icono del sitio Web">
+            </div>
+            <div class="title">
+                <h1>INICIO</h1>
+            </div>
+            <!-- <div> -->
+            <ul class="menu">
+                <li>
+                    <a class="list" href="index.html">INICIO</a>
+                </li>
+                <li>
+                    <a class="list" href="./HTMLs/sheet1.html">IRON MAIDEN</a>
+                </li>
+                <li>
+                    <a class="list" href="./HTMLs/sheet2.html">MEGADETH</a>
+                </li>
+                <li>
+                    <a class="list" href="./HTMLs/sheet3.html">METALLICA</a>
+                </li>
+                <li>
+                    <a class="list" href="./HTMLs/sheet4.html">DEATH</a>
+                </li>
+            </ul>
+            <!-- </div> -->
+        </nav>
+
+        <section class="content">
+            <article class="art_1 art">
+                <!-- <img src="./imagenes/Editadas/IronMaiden/Iron-Maiden-Piece-Of-mind.png" alt="ALBUM: Piece of mind"> -->
+                <div class="backgroung-img_1">
+                    <div class="cont_art_1">
+                        <div class="art_title">
+                            <h2>IRON MAIDEN</h2>
+                        </div>
+                        <div class="art_1_cont">
+                            <div class="video_1">
+
+                                <iframe width="460" height="215" src="https://www.youtube.com/embed/Bqt6CW7dT2Y"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+
+                            </div>
+
+                            <div class="parra_1">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur. Lacus sit ac pulvinar tellus. Sollicitudin
+                                    egestas
+                                    amet mus gravida. In vel volutpat at nisl. Mattis mi diam commodo condimentum velit
+                                    pellentesque pellentesque. Praesent pulvinar iaculis mi.
+                                </p>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="art_2 art">
+                <div class="backgroung-img_2">
+                    <div class="cont_art_2">
+                        <div class="art_title">
+                            <h2>MEGADETH</h2>
+                        </div>
+                        <div class="art_2_cont">
+                            <div class="video_2">
+
+                                <iframe width="460" height="215" src="https://www.youtube.com/embed/JbCOR8hgYEs"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+
+                                <!-- <iframe width="460" height="215" src="https://www.youtube.com/embed/tyhr0n3v5EU" 
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+                                    picture-in-picture; web-share"
+                                    allowfullscreen></iframe> -->
+                            </div>
+
+                            <div class="parra_2">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur. Lacus sit ac pulvinar tellus. Sollicitudin
+                                    egestas
+                                    amet mus gravida. In vel volutpat at nisl. Mattis mi diam commodo condimentum velit
+                                    pellentesque pellentesque. Praesent pulvinar iaculis mi.
+                                </p>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="art_3 art">
+                <div class="backgroung-img_3">
+                    <div class="cont_art_3">
+                        <div class="art_title">
+                            <h2>METALLICA</h2>
+                        </div>
+                        <div class="art_3_cont">
+                            <div class="video_3">
+
+                                <iframe width="460" height="215" src="https://www.youtube.com/embed/gRdnPnwU9EI"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+
+                                <!-- <iframe width="460" height="215" src="https://www.youtube.com/embed/tyhr0n3v5EU" 
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+                                    picture-in-picture; web-share"
+                                    allowfullscreen></iframe> -->
+                            </div>
+
+                            <div class="parra_3">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur. Lacus sit ac pulvinar tellus. Sollicitudin
+                                    egestas
+                                    amet mus gravida. In vel volutpat at nisl. Mattis mi diam commodo condimentum velit
+                                    pellentesque pellentesque. Praesent pulvinar iaculis mi.
+                                </p>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </article>
+            <article class="art_4 art">
+                <div class="backgroung-img_4">
+                    <div class="cont_art_4">
+                        <div class="art_title">
+                            <h2>DEATH</h2>
+                        </div>
+                        <div class="art_4_cont">
+                            <div class="video_4">
+
+                                <iframe width="460" height="215" src="https://www.youtube.com/embed/_DkdeV5CH08"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+
+                                <!-- <iframe width="460" height="215" src="https://www.youtube.com/embed/tyhr0n3v5EU" 
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+                                    picture-in-picture; web-share"
+                                    allowfullscreen></iframe> -->
+                            </div>
+
+                            <div class="parra_4">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur. Lacus sit ac pulvinar tellus. Sollicitudin
+                                    egestas
+                                    amet mus gravida. In vel volutpat at nisl. Mattis mi diam commodo condimentum velit
+                                    pellentesque pellentesque. Praesent pulvinar iaculis mi.
+                                </p>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+        </section>
+
         <footer class="footer">
-            <h6>Redes sociales: </h6>
-            <img class="imag"  src="#" alt="Facebook">
-            <img class="imag"  src="#" alt="Instagram">
-            <img class="imag"  src="#" alt="Youtube">
+            <div class="autor">
+                <h6>Juan Sebastian Saldaña Castro</h6>
+            </div>
+            <div class="container-redes">
+                <div class="redes">
+                    <h6>Redes sociales: </h6>
+                </div>
+                <div class="Footer_redes">
+                    <a href="https://www.facebook.com/">
+                        <span class="iconify facebook" data-icon="bi:facebook">
+                        </span>
+                    </a>
+
+                    <a href="https://www.instagram.com/">
+                        <span class="iconify instagram" data-icon="mdi:instagram">
+                        </span>
+                    </a>
+
+                    <a href="https://www.youtube.com/">
+                        <span class="iconify youtube" data-icon="ri:youtube-fill">
+                        </span>
+                    </a>
+
+
+
+                </div>
+            </div>
         </footer>
-    </section>
-    <!--Seccion izquierda-->
-    <section class="section_left">
-        <div class="img_left">
-            <img class="imag"  src="#" alt="Se carga lateral 1">
-        </div>
-    </section>
-    <!--Seccion derecha-->
-    <section class="section_right">
-        <div class="img_right">
-            <img class="imag"  src="#" alt="Se carga lateral 2">
-            <p>parrafoooooo</p>
-        </div>
     </section>
 
 </body>
