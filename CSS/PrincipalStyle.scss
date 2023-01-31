@@ -1,0 +1,104 @@
+@import "./utilities/variables";
+
+.content {
+    grid-area: content;
+    background-color: orange;
+    display: grid;
+    grid-template-rows: repeat(4 auto); 
+    grid-template-areas:
+        "ar1"
+        "ar2"
+        "ar3"
+        "ar4";
+    height: auto;
+
+    //se aplica for   
+    @for $i from 1 through 4 {
+        .art_#{$i} {
+            grid-area: ar#{$i};
+            height: auto;
+            width: auto;
+            position: relative;
+
+            .backgroung-img_#{$i} {
+                width: 100%;
+                height: 450px;
+                background-image: url("../imagenes/Editadas/IronMaiden/LaBanda.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                filter: grayscale(0.8);
+
+                &:hover {
+                    filter: contrast(0.6);
+                    filter: saturate(0.6);
+                    cursor: cell;
+                    transition: 2s;
+
+                }
+            }
+
+            .cont_art_#{$i} {
+                display: grid;
+                grid-template-rows: 30% auto;
+                grid-template-areas:
+                    "Title"
+                    "cont";
+
+                .art_#{$i}_title {
+                    grid-area: Title;
+
+                }
+
+                .art_#{$i}_cont {
+                    grid-area: cont;
+                    height: autor;
+                    display: grid;
+                    grid-template-columns: 60% 40%;
+                    grid-template-areas:
+                        "video" "parra";                 
+                    
+                    .video_#{$i} {
+                        grid-area: video;
+                        height: auto;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        
+                    }
+                    .parra_#{$i}{
+                        grid-area: parra;
+                        display: inline;
+                        position: fixed; 
+                        left: 60%;
+                        top: 35%;               
+                        height: auto;
+                        width: 35%;                       
+                    }
+                }
+
+            }
+        }//End article
+    }
+
+    //End for 
+}
+
+//End Content
+
+p {
+    color: $color_parrafos;
+    font-family: $FontFamily;
+    font-size: $FontSize_Parra;
+    margin: 0% 12% 0% 5%;
+    padding: 1% 0.5%;
+    height: auto;
+    width: auto;
+}
+
+h2 {
+    color: $color_title_arti;
+    font-family: $FontFamily;
+    font-size: $FontSize_TitleArt;
+    margin-left: 4%;
+    margin-top: 2%;
+}
