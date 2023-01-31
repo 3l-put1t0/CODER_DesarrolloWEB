@@ -1,0 +1,230 @@
+.content {
+  grid-area: content;
+  background-color: orange;
+  display: grid;
+  grid-template-rows: repeat(4 auto);
+  grid-template-areas: "ar1" "ar2" "ar3" "ar4";
+  height: auto;
+}
+.content .art_1 {
+  grid-area: ar1;
+  height: auto;
+  width: auto;
+  position: relative;
+}
+.content .art_1 .backgroung-img_1 {
+  width: 100%;
+  height: 450px;
+  background-image: url("../imagenes/Editadas/IronMaiden/LaBanda.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(0.8);
+}
+.content .art_1 .backgroung-img_1:hover {
+  filter: contrast(0.6);
+  filter: saturate(0.6);
+  cursor: cell;
+  transition: 2s;
+}
+.content .art_1 .cont_art_1 {
+  display: grid;
+  grid-template-rows: 30% auto;
+  grid-template-areas: "Title" "cont";
+}
+.content .art_1 .cont_art_1 .art_1_title {
+  grid-area: Title;
+}
+.content .art_1 .cont_art_1 .art_1_cont {
+  grid-area: cont;
+  height: autor;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: "video" "parra";
+}
+.content .art_1 .cont_art_1 .art_1_cont .video_1 {
+  grid-area: video;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.content .art_1 .cont_art_1 .art_1_cont .parra_1 {
+  grid-area: parra;
+  display: inline;
+  position: fixed;
+  left: 60%;
+  top: 35%;
+  height: auto;
+  width: 35%;
+}
+.content .art_2 {
+  grid-area: ar2;
+  height: auto;
+  width: auto;
+  position: relative;
+}
+.content .art_2 .backgroung-img_2 {
+  width: 100%;
+  height: 450px;
+  background-image: url("../imagenes/Editadas/Megadeth/LaBanda.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(0.8);
+}
+.content .art_2 .backgroung-img_2:hover {
+  filter: contrast(0.6);
+  filter: saturate(0.6);
+  cursor: cell;
+  transition: 2s;
+}
+.content .art_2 .cont_art_2 {
+  display: grid;
+  grid-template-rows: 30% auto;
+  grid-template-areas: "Title" "cont";
+}
+.content .art_2 .cont_art_2 .art_2_title {
+  grid-area: Title;
+}
+.content .art_2 .cont_art_2 .art_2_cont {
+  grid-area: cont;
+  height: autor;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: "video" "parra";
+}
+.content .art_2 .cont_art_2 .art_2_cont .video_2 {
+  grid-area: video;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.content .art_2 .cont_art_2 .art_2_cont .parra_2 {
+  grid-area: parra;
+  display: inline;
+  position: fixed;
+  left: 60%;
+  top: 35%;
+  height: auto;
+  width: 35%;
+}
+.content .art_3 {
+  grid-area: ar3;
+  height: auto;
+  width: auto;
+  position: relative;
+}
+.content .art_3 .backgroung-img_3 {
+  width: 100%;
+  height: 450px;
+  background-image: url("../imagenes/Editadas/Metallica/Labanda.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(0.8);
+}
+.content .art_3 .backgroung-img_3:hover {
+  filter: contrast(0.6);
+  filter: saturate(0.6);
+  cursor: cell;
+  transition: 2s;
+}
+.content .art_3 .cont_art_3 {
+  display: grid;
+  grid-template-rows: 30% auto;
+  grid-template-areas: "Title" "cont";
+}
+.content .art_3 .cont_art_3 .art_3_title {
+  grid-area: Title;
+}
+.content .art_3 .cont_art_3 .art_3_cont {
+  grid-area: cont;
+  height: autor;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: "video" "parra";
+}
+.content .art_3 .cont_art_3 .art_3_cont .video_3 {
+  grid-area: video;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.content .art_3 .cont_art_3 .art_3_cont .parra_3 {
+  grid-area: parra;
+  display: inline;
+  position: fixed;
+  left: 60%;
+  top: 35%;
+  height: auto;
+  width: 35%;
+}
+.content .art_4 {
+  grid-area: ar4;
+  height: auto;
+  width: auto;
+  position: relative;
+}
+.content .art_4 .backgroung-img_4 {
+  width: 100%;
+  height: 450px;
+  background-image: url("../imagenes/Editadas/Death/LaBanda.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(0.8);
+}
+.content .art_4 .backgroung-img_4:hover {
+  filter: contrast(0.6);
+  filter: saturate(0.6);
+  cursor: cell;
+  transition: 2s;
+}
+.content .art_4 .cont_art_4 {
+  display: grid;
+  grid-template-rows: 30% auto;
+  grid-template-areas: "Title" "cont";
+}
+.content .art_4 .cont_art_4 .art_4_title {
+  grid-area: Title;
+}
+.content .art_4 .cont_art_4 .art_4_cont {
+  grid-area: cont;
+  height: autor;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: "video" "parra";
+}
+.content .art_4 .cont_art_4 .art_4_cont .video_4 {
+  grid-area: video;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.content .art_4 .cont_art_4 .art_4_cont .parra_4 {
+  grid-area: parra;
+  display: inline;
+  position: fixed;
+  left: 60%;
+  top: 35%;
+  height: auto;
+  width: 35%;
+}
+
+p {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 150%;
+  margin: 0% 12% 0% 5%;
+  padding: 1% 0.5%;
+  height: auto;
+  width: auto;
+}
+
+h2 {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 400%;
+  margin-left: 4%;
+  margin-top: 2%;
+}/*# sourceMappingURL=PrincipalStyle.css.map */
