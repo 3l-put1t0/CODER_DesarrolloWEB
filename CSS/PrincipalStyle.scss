@@ -4,7 +4,7 @@
     grid-area: content;
     background-color: orange;
     display: grid;
-    grid-template-rows: repeat(4 auto); 
+    grid-template-rows: repeat(4 auto);
     grid-template-areas:
         "ar1"
         "ar2"
@@ -16,18 +16,60 @@
     @for $i from 1 through 4 {
         .art_#{$i} {
             grid-area: ar#{$i};
+            // position: relative;
             height: auto;
             width: auto;
-            position: relative;
 
             .backgroung-img_#{$i} {
                 width: 100%;
-                height: 450px;
+                @media(max-width: 310px) and (min-width: 300px) {
+                   
+                    height: 655px;
+                }
+                @media(max-width: 320px) and (min-width: 310px) {
+                   
+                    height: 650px;
+                }
+                @media(max-width: 330px) and (min-width: 320px) {
+                   
+                    height: 640px;
+                }
+                @media(max-width: 340px) and (min-width: 330px) {
+                   
+                    height: 630px;
+                }
+                @media(max-width: 350px) and (min-width: 340px) {
+                   
+                    height: 620px;
+                }
+                @media(max-width: 360px) and (min-width: 350px) {
+                   
+                    height: 600px;
+                }
+
+                @media(max-width: 450px) and (min-width: 360px) {
+                   
+                    height: 580px;
+                }
+
+                @media(max-width: 500px) and (min-width: 450px) {
+                   
+                    height: 550px;
+                }
+                @media(max-width: 650px) and (min-width: 500px) {
+                   
+                    height: 500px;
+                }
+                @media(min-width: 650px) {
+                    height: 450px;
+                }
+
+              
                 background-image: url("../imagenes/Editadas/IronMaiden/LaBanda.jpg");
                 background-size: cover;
                 background-repeat: no-repeat;
-                filter: grayscale(0.8);
-
+                filter: grayscale(0.8);            
+          
                 &:hover {
                     filter: contrast(0.6);
                     filter: saturate(0.6);
@@ -42,7 +84,7 @@
                 grid-template-rows: 30% auto;
                 grid-template-areas:
                     "Title"
-                    "cont";
+                    "cont";           
 
                 .art_#{$i}_title {
                     grid-area: Title;
@@ -53,31 +95,135 @@
                     grid-area: cont;
                     height: autor;
                     display: grid;
-                    grid-template-columns: 60% 40%;
+                    grid-template-columns: 50% 50%;
                     grid-template-areas:
-                        "video" "parra";                 
-                    
+                        "video" "parra";
+                                      
+
                     .video_#{$i} {
                         grid-area: video;
                         height: auto;
-                        display: flex;
+                        display: flex;                       
                         flex-direction: row;
                         justify-content: center;
-                        
+                        z-index: 2;
+
+                        iframe {
+                            @media(max-width: 310px) and (min-width: 300px) {
+                                width: 460px - 162px;
+                                height: 215px - 45px;
+                            }
+                            @media(max-width: 320px) and (min-width: 310px) {
+                                width: 460px - 152px;
+                                height: 215px - 45px;
+                            }
+                            @media(max-width: 340px) and (min-width: 320px) {
+                                width: 460px - 142px;
+                                height: 215px - 45px;
+                            }
+                            @media(max-width: 350px) and (min-width: 340px) {
+                                width: 460px - 122px;
+                                height: 215px - 45px;
+                            }
+                            @media(max-width: 360px) and (min-width: 350px) {
+                                width: 460px - 114px;
+                                height: 215px - 45px;
+                            }
+                            @media(max-width: 370px) and (min-width: 360px) {
+                                width: 460px - 102px;
+                                height: 215px - 45px;
+                            }
+                            @media(max-width: 400px) and (min-width: 370px) {
+                                width: 460px - 100px;
+                                height: 215px - 45px;
+                            }
+                            @media(max-width: 500px) and (min-width: 400px) {
+                                width: 460px - 65px;
+                                height: 215px - 45px;
+                            }
+                            @media(max-width: 885px) and (min-width: 500px) {
+                                width: 460px - 40px;
+                                height: 215px - 40px;
+                            }
+
+                            @media(max-width: 940px) and (min-width: 885px) {
+                                width: 460px - 30px;
+                                height: 215px - 30px;
+                            }
+
+                            @media(max-width: 1000px) and (min-width: 940px) {
+                                width: 460px - 20px;
+                                height: 215px - 20px;
+                            }
+
+                            @media(min-width: 1000px) {
+                                width: 460px;
+                                height: 215px;
+                            }
+
+                        }
+
+                        ;
+
                     }
-                    .parra_#{$i}{
+
+                    .parra_#{$i} {
                         grid-area: parra;
                         display: inline;
-                        position: fixed; 
-                        left: 60%;
-                        top: 35%;               
+                        position: fixed;
+                        left: 55%;
+                        
+                        @media(max-width: 1050px) {
+                            top: 7%;
+                         }
+                         @media(min-width: 1050px)  {
+                            top: 10%;
+                         }
                         height: auto;
-                        width: 35%;                       
+                        width: 45%;
+                    }
+
+
+                    @media(max-width: 650px) {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        .parra_#{$i} {
+                            height: auto;
+                            width: auto;
+                            left: 5%;
+                            right: 2%;
+
+                            @media(max-width: 315px){
+                                top: 38%;
+                            }                            
+                            @media(max-width: 340px) and (min-width: 315px){
+                                top: 40%;
+                            }                                                      
+                            @media(max-width: 350px)  and (min-width: 340px){
+                               top: 42%;
+                            }
+                            @media(max-width: 400px) and (min-width: 350px) {
+                               top: 43%;
+                            }
+                            @media(max-width: 500px) and (min-width: 400px) {
+                                top: 45%;
+                            }
+                            @media(max-width: 650px) and (min-width: 500px) {
+                               top: 55%;
+                            }
+                            text-align: center;
+                        }
+                        
                     }
                 }
 
             }
-        }//End article
+        }
+
+        //End article
     }
 
     //End for 
@@ -88,7 +234,20 @@
 p {
     color: $color_parrafos;
     font-family: $FontFamily;
-    font-size: $FontSize_Parra;
+    
+    @media(max-width: 650px){
+        font-size: $FontSize_Parra1;
+    }
+    @media(max-width: 680px)and (min-width: 650px){
+        font-size: $FontSize_Parra - 0.3rem;
+     }
+    @media(max-width: 1050px)and (min-width: 680px){
+       font-size: $FontSize_Parra - 0.1rem;
+    }
+    @media(min-width: 1050px)  {
+        font-size: $FontSize_Parra;
+    }
+
     margin: 0% 12% 0% 5%;
     padding: 1% 0.5%;
     height: auto;
@@ -102,3 +261,5 @@ h2 {
     margin-left: 4%;
     margin-top: 2%;
 }
+
+

@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700;900&family=Playfair+Display:wght@400;500&family=Roboto:ital,wght@0,100;0,300;0,500;0,900;1,100&family=Vidaloka&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700;900&family=Playfair+Display:wght@400;500&family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,500;0,900;1,100&family=Vidaloka&display=swap");
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: rgb(49, 49, 49);
 }
 
 html {
@@ -10,21 +11,84 @@ html {
 }
 
 body {
-  background-color: rgb(49, 49, 49);
+  background-color: rgb(49, 49, 49) !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
-body .container {
+body .carrusel {
+  height: auto;
+}
+@media (max-width: 420px) and (min-width: 400px) {
+  body .carrusel {
+    width: 100vw;
+  }
+}
+@media (min-width: 420px) {
+  body .carrusel {
+    width: 100%;
+  }
+}
+body .principal {
+  grid-area: body;
   background-color: aqua;
-  width: 100%;
-  height: 100vh;
+  height: auto;
   display: grid;
-  grid-template-rows: 20% auto 8%;
   grid-template-areas: "nav" "content" "footer";
   padding: 0;
 }
-body .container .navegator {
+@media (max-width: 910px) {
+  body .principal {
+    width: 100vw;
+  }
+}
+@media (min-width: 910px) {
+  body .principal {
+    width: 85vw;
+  }
+}
+@media (max-width: 400px) {
+  body .principal {
+    grid-template-rows: 6% auto 8%;
+  }
+}
+@media (max-width: 530px) and (min-width: 400px) {
+  body .principal {
+    grid-template-rows: 7% auto 10%;
+  }
+}
+@media (max-width: 600px) and (min-width: 530px) {
+  body .principal {
+    grid-template-rows: 7% auto 12%;
+  }
+}
+@media (max-width: 700px) and (min-width: 600px) {
+  body .principal {
+    grid-template-rows: 7% auto 12%;
+  }
+}
+@media (max-width: 800px) and (min-width: 700px) {
+  body .principal {
+    grid-template-rows: 8% auto 8%;
+  }
+}
+@media (max-width: 900px) and (min-width: 800px) {
+  body .principal {
+    grid-template-rows: 11% auto 8%;
+  }
+}
+@media (max-width: 1200px) and (min-width: 900px) {
+  body .principal {
+    grid-template-rows: 12% auto 8%;
+  }
+}
+@media (min-width: 1200px) {
+  body .principal {
+    grid-template-rows: 15% auto 8%;
+  }
+}
+body .principal .navegator {
   grid-area: nav;
   display: grid;
   background-color: rgb(76, 69, 69);
@@ -35,24 +99,22 @@ body .container .navegator {
   height: auto;
   width: 100%;
 }
-body .container .navegator .logo {
+body .principal .navegator .logo {
   grid-area: logo;
   height: 50%;
   width: 50%;
   align-content: center;
 }
-body .container .navegator .logo img {
+body .principal .navegator .logo img {
   width: 200%;
 }
-body .container .navegator .logo img:hover {
-  /* Webkit */
-  filter: gray;
+body .principal .navegator .logo img:hover {
   /* IE6-9 */
   filter: grayscale(1);
   /* W3C */
   transition: 2s;
 }
-body .container .navegator .title {
+body .principal .navegator .title {
   grid-area: title;
   color: white;
   padding-left: 0.5rem;
@@ -61,14 +123,43 @@ body .container .navegator .title {
   justify-content: flex-start;
   align-items: center;
 }
-body .container .navegator .title h1 {
-  margin: 0rem 0.3rem 0rem 5%;
+body .principal .navegator .title h1 {
+  margin: 0% 1% 0% 5%;
   font-family: "Roboto", sans-serif;
-  font-size: 700%;
   -webkit-text-decoration: solid;
           text-decoration: solid;
 }
-body .container .navegator ul {
+@media (max-width: 320px) {
+  body .principal .navegator .title h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 400px) and (min-width: 320px) {
+  body .principal .navegator .title h1 {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 600px) and (min-width: 400px) {
+  body .principal .navegator .title h1 {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 800px) and (min-width: 600px) {
+  body .principal .navegator .title h1 {
+    font-size: 7rem;
+  }
+}
+@media (max-width: 1000px) and (min-width: 800px) {
+  body .principal .navegator .title h1 {
+    font-size: 8rem;
+  }
+}
+@media (min-width: 1000px) {
+  body .principal .navegator .title h1 {
+    font-size: 10rem;
+  }
+}
+body .principal .navegator ul {
   grid-area: menu;
   list-style-type: none;
   display: flex;
@@ -79,77 +170,229 @@ body .container .navegator ul {
   height: auto;
   padding-top: 2%;
 }
-body .container .navegator ul li {
+body .principal .navegator ul li {
   margin: 0 1%;
   padding-left: 1%;
   padding-right: 1%;
 }
-body .container .navegator ul li:hover {
+body .principal .navegator ul li:hover {
   background-color: rgb(60, 63, 46);
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   transition: 1s;
 }
-body .container .navegator ul li:hover {
+body .principal .navegator ul li:hover {
   border-bottom: 0.5rem solid white;
 }
-body .container .navegator ul li .list {
+body .principal .navegator ul li .list {
   color: white;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
-  font-size: 200%;
+  font-size: 1.9rem;
 }
-body .container .content {
-  grid-area: content;
+@media (max-width: 400px) {
+  body .principal .navegator ul li .list {
+    font-size: 0.9rem;
+  }
 }
-body .container .footer {
+@media (max-width: 600px) and (min-width: 400px) {
+  body .principal .navegator ul li .list {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 800px) and (min-width: 600px) {
+  body .principal .navegator ul li .list {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 1000px) and (min-width: 800px) {
+  body .principal .navegator ul li .list {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 1000px) {
+  body .principal .navegator ul li .list {
+    font-size: 1.9rem;
+  }
+}
+body .principal .footer {
   grid-area: footer;
   background-color: red;
+  height: auto;
   display: grid;
   grid-template-columns: 30% 70%;
   grid-template-areas: "autor     redes";
   align-items: center;
 }
-body .container .footer .autor {
+body .principal .footer .autor {
   grid-area: autor;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-body .container .footer .autor h6 {
+body .principal .footer .autor h6 {
   margin-left: 10%;
-  font-family: "Roboto", sans-serif;
-  font-size: 100%;
+  font-family: "Press Start 2P", cursive;
   color: rgb(155, 154, 154);
 }
-body .container .footer .container-redes {
+@media (max-width: 300px) {
+  body .principal .footer .autor h6 {
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 400px) and (min-width: 300px) {
+  body .principal .footer .autor h6 {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 500px) and (min-width: 400px) {
+  body .principal .footer .autor h6 {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 600px) and (min-width: 500px) {
+  body .principal .footer .autor h6 {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 800px) and (min-width: 600px) {
+  body .principal .footer .autor h6 {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1000px) and (min-width: 800px) {
+  body .principal .footer .autor h6 {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1000px) {
+  body .principal .footer .autor h6 {
+    font-size: 1.3rem;
+  }
+}
+body .principal .footer .autor h6:hover {
+  font-size: "Press Start 2P", cursive200%;
+  color: rgb(255, 255, 255);
+  border-bottom: 10% solid rgb(255, 255, 255);
+  box-shadow: 0px 0px 10% rgb(155, 154, 154);
+}
+body .principal .footer .container_redes {
   grid-area: redes;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  align-items: center;
+  align-content: center;
   margin-right: 10%;
   height: auto;
 }
-body .container .footer .container-redes .redes {
+body .principal .footer .container_redes .redes {
   margin-right: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-body .container .footer .container-redes .redes h6 {
+body .principal .footer .container_redes .redes h6 {
   font-size: 150%;
   font-family: "Roboto", sans-serif;
-  color: white;
+  color: rgb(224, 226, 232);
 }
-body .container .footer .container-redes .Footer_redes {
+body .principal .footer .container_redes .Footer_redes {
   width: 30%;
   height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-content: center;
+  align-items: center;
 }
-body .container .footer .container-redes .Footer_redes .facebook {
-  width: 270%;
-  height: 140%;
+body .principal .footer .container_redes .Footer_redes .facebook {
+  color: rgb(224, 226, 232);
 }
-body .container .footer .container-redes .Footer_redes .instagram,
-body .container .footer .container-redes .Footer_redes .youtube {
-  width: 300%;
-  height: 150%;
+@media (max-width: 300px) {
+  body .principal .footer .container_redes .Footer_redes .facebook {
+    width: 2.3rem;
+    height: 2.3rem;
+  }
+}
+@media (max-width: 400px) and (min-width: 300px) {
+  body .principal .footer .container_redes .Footer_redes .facebook {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+@media (max-width: 500px) and (min-width: 400px) {
+  body .principal .footer .container_redes .Footer_redes .facebook {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+}
+@media (max-width: 600px) and (min-width: 500px) {
+  body .principal .footer .container_redes .Footer_redes .facebook {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+@media (max-width: 800px) and (min-width: 600px) {
+  body .principal .footer .container_redes .Footer_redes .facebook {
+    width: 3.3rem;
+    height: 3.3rem;
+  }
+}
+@media (min-width: 800px) {
+  body .principal .footer .container_redes .Footer_redes .facebook {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+body .principal .footer .container_redes .Footer_redes .facebook:hover {
+  color: rgb(40, 40, 49);
+}
+body .principal .footer .container_redes .Footer_redes .instagram,
+body .principal .footer .container_redes .Footer_redes .youtube {
+  color: rgb(224, 226, 232);
+}
+@media (max-width: 300px) {
+  body .principal .footer .container_redes .Footer_redes .instagram,
+  body .principal .footer .container_redes .Footer_redes .youtube {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+}
+@media (max-width: 400px) and (min-width: 300px) {
+  body .principal .footer .container_redes .Footer_redes .instagram,
+  body .principal .footer .container_redes .Footer_redes .youtube {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+@media (max-width: 500px) and (min-width: 400px) {
+  body .principal .footer .container_redes .Footer_redes .instagram,
+  body .principal .footer .container_redes .Footer_redes .youtube {
+    width: 3.3rem;
+    height: 3.3rem;
+  }
+}
+@media (max-width: 600px) and (min-width: 500px) {
+  body .principal .footer .container_redes .Footer_redes .instagram,
+  body .principal .footer .container_redes .Footer_redes .youtube {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+@media (max-width: 800px) and (min-width: 600px) {
+  body .principal .footer .container_redes .Footer_redes .instagram,
+  body .principal .footer .container_redes .Footer_redes .youtube {
+    width: 3.8rem;
+    height: 3.8rem;
+  }
+}
+@media (min-width: 800px) {
+  body .principal .footer .container_redes .Footer_redes .instagram,
+  body .principal .footer .container_redes .Footer_redes .youtube {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+body .principal .footer .container_redes .Footer_redes .instagram:hover,
+body .principal .footer .container_redes .Footer_redes .youtube:hover {
+  color: rgb(40, 40, 49);
 }/*# sourceMappingURL=Standar.css.map */

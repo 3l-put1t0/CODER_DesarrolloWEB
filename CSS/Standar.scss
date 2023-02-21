@@ -1,33 +1,95 @@
-@import "./utilities/reset";
 @import "./utilities/variables";
+@import "./utilities/reset";
 @import "./utilities/fontSize";
 
 
 body {
-    background-color: $color_body;
+    background-color: $color_body !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    // display: grid;
+    // grid-template-rows: auto auto;
+    // grid-template-areas: 
+    // "carr"
+    // "body";
+    // align-content: center;
 
-    .container {
+    .carrusel{
+        // grid-area: carr;
+
+        @media(max-width: 420px) and (min-width: 400px) {
+           
+            width: 100vw;
+        }
+        @media(min-width: 420px) {
+            width: 100%;
+        }
+       
+        height: auto;
+    }
+
+    .principal {
+        grid-area: body;
         background-color: aqua;
-        width: 100%;
-        height: 100vh;
+          
+        @media (max-width: 910px) {
+            width: 100vw;
+        }
+        @media (min-width: 910px) {
+            width: 85vw;
+        }         
+        
+        height: auto;
         display: grid;
-        grid-template-rows: 20% auto 8%;
+        @media(max-width: 400px){
+                   
+            grid-template-rows: 6% auto 8%;
+        }
+        @media(max-width: 530px) and (min-width: 400px) {
+                   
+            grid-template-rows: 7% auto 10%;
+        }
+        @media(max-width: 600px) and (min-width: 530px) {
+                   
+            grid-template-rows: 7% auto 12%;
+        }
+        @media(max-width: 700px) and (min-width: 600px) {
+           
+            grid-template-rows: 7% auto 12%;
+        }
+
+        @media(max-width: 800px) and (min-width: 700px) {
+           
+            grid-template-rows: 8% auto 8%;
+        }
+        @media(max-width: 900px) and (min-width: 800px) {
+           
+            grid-template-rows: 11% auto 8%;
+        }
+        @media(max-width: 1200px) and (min-width: 900px) {
+           
+            grid-template-rows: 12% auto 8%;
+        }
+        @media(min-width: 1200px) {
+            grid-template-rows: 15% auto 8%;
+        }
+        
         grid-template-areas:            
             "nav"
             "content"
             "footer"
         ;
         padding: 0;
+        // align-items: center;
         // margin: 0;
 
    
         .navegator {
             grid-area: nav;
             display: grid;
-            background-color: rgb(76, 69, 69);
+            background-color: $color_menu;
             grid-template-rows: 60% 40%;
             grid-template-columns: 10% 90%;
             grid-template-areas:
@@ -52,8 +114,6 @@ body {
 
                 img:hover {
                     -webkit-filter: grayscale(1);
-                    /* Webkit */
-                    filter: gray;
                     /* IE6-9 */
                     filter: grayscale(1);
                     /* W3C */
@@ -73,12 +133,39 @@ body {
                 // flex-direction: row;
                 justify-content: flex-start;
                 align-items: center;
+                // @media(max-width: 450px) {
+                //     width: 316px;
+                // }
+                // width: auto;
+                // height: auto;
 
                 h1 {
-                    margin: 0rem 0.3rem 0rem 5%;
+                    margin: 0% 1% 0% 5%;
                     font-family: $FontFamily;
-                    font-size: $FontSize_Title;
+                    // font-size: $FontSize_Title;
                     text-decoration: solid;
+                    @media(max-width: 320px) {
+                        font-size: $FontSize_Title - 7rem;
+                    }
+                    @media(max-width: 400px) and (min-width: 320px){
+                        font-size: $FontSize_Title - 6rem;
+                    }
+
+                    @media(max-width: 600px) and (min-width: 400px) {
+                        font-size: $FontSize_Title - 5rem;   
+                    }
+                
+                    @media(max-width: 800px) and (min-width: 600px) {
+                        font-size: $FontSize_Title - 3rem;   
+                    }
+                
+                    @media(max-width: 1000px) and (min-width: 800px) {
+                        font-size: $FontSize_Title - 2rem;   
+                    }
+                
+                    @media(min-width: 1000px) { 
+                        font-size: $FontSize_Title;   
+                    }
                 }
             }
 
@@ -109,14 +196,35 @@ body {
                     }
 
                     &:hover{
-                        border-bottom: 0.5rem solid  $color_menu;
+                        border-bottom: 0.5rem solid  $color_menu_letter;
                     }
 
                     .list {
-                        color: $color_menu;
+                        color: $color_menu_letter;
                         text-decoration: none;
                         font-family: $FontFamily;
                         font-size: $FontSize_list;
+
+                      
+                        @media(max-width: 400px){
+                            font-size: $FontSize_list - 1rem;
+                        }
+    
+                        @media(max-width: 600px) and (min-width: 400px) {
+                            font-size: $FontSize_list - 0.9rem;   
+                        }
+                    
+                        @media(max-width: 800px) and (min-width: 600px) {
+                            font-size: $FontSize_list - 0.7rem;   
+                        }
+                    
+                        @media(max-width: 1000px) and (min-width: 800px) {
+                            font-size: $FontSize_list - 0.5rem;   
+                        }
+                    
+                        @media(min-width: 1000px) { 
+                            font-size: $FontSize_list;   
+                        }
 
                     }
                 }
@@ -127,16 +235,17 @@ body {
 
         //End navegator
 
-        .content {
-            grid-area: content;
+        // .content {
+        //     grid-area: content;
         
-        }
+        // }
 
-        //End content
+       // End content
 
         .footer {
             grid-area: footer;
-            background-color: red;
+            background-color: $color_foooter;
+            height: auto;
             display: grid;
             grid-template-columns: 30% 70%;
             grid-template-areas: "autor     redes";
@@ -144,28 +253,70 @@ body {
 
             .autor {
                 grid-area: autor;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
 
                 h6 {
                     margin-left: 10%;
-                    font-family: $FontFamily;
-                    font-size: $FontAutor;
+                    font-family: $FontFamilyAutor;
+                    
+
+                    @media(max-width: 300px) {
+                        font-size: $FontAutor - 0.8rem;   
+                    }
+                    @media(max-width: 400px) and (min-width: 300px) {
+                        font-size: $FontAutor - 0.6;   
+                     }
+
+                    @media(max-width: 500px) and (min-width: 400px) {
+                        font-size: $FontAutor - 0.6;   
+                     }
+                
+                    @media(max-width: 600px) and (min-width: 500px) {
+                        font-size: $FontAutor - 0.4;   
+                     }
+                
+                    @media(max-width: 800px) and (min-width: 600px) {
+                       font-size: $FontAutor - 0.3;   
+                    }
+                
+                    @media(max-width: 1000px) and (min-width: 800px) {
+                        font-size: $FontAutor - 0.1rem;   
+                    }
+                
+                    @media(min-width: 1000px) {
+                        font-size: $FontAutor;
+                    }
+
                     color: $color_autor;
+                    
+                    &:hover{
+                        font-size: $FontFamilyAutor + 200%;
+                        color:$color_Change_autor;
+                        border-bottom: 10% solid $color_Change_autor;
+                        box-shadow: 0px 0px 10% $color_autor;
+                    }
                 }
             }
 
             //End autor
 
-            .container-redes {
+            .container_redes {
                 grid-area: redes;
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-end;
-                align-items: center;
+                // align-items: center;
+                align-content: center;
                 margin-right: 10%;
                 height: auto;
 
                 .redes {
                     margin-right: 5%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
 
                     h6 {
                         font-size: $FontSizeRedes;
@@ -181,17 +332,81 @@ body {
                     display: flex;
                     flex-direction: row;
                     justify-content: space-evenly;
-                    align-content: center;
+                    align-items: center;
 
                     .facebook {
-                        width: $IconFooterWigth - 30%;
-                        height: $IconFooterHeight - 10%;
+                                
+                        @media(max-width: 300px) {
+                            width: $IconFooterWigth - 1.2rem - 0.5rem;
+                            height: $IconFooterHeight - 1.2rem - 0.5rem;  
+                        }
+                        @media(max-width: 400px) and (min-width: 300px) {
+                            width: $IconFooterWigth - 1rem - 0.5rem;
+                            height: $IconFooterHeight - 1rem - 0.5rem;   
+                         }
+    
+                        @media(max-width: 500px) and (min-width: 400px) {
+                            width: $IconFooterWigth - 0.7rem - 0.5rem;
+                            height: $IconFooterHeight - 0.7rem - 0.5rem;   
+                         }
+                    
+                        @media(max-width: 600px) and (min-width: 500px) {
+                            width: $IconFooterWigth - 0.5rem - 0.5rem;
+                            height: $IconFooterHeight - 0.5rem - 0.5rem;    
+                         }
+                    
+                        @media(max-width: 800px) and (min-width: 600px) {
+                            width: $IconFooterWigth - 0.2rem - 0.5rem;
+                            height: $IconFooterHeight - 0.2rem - 0.5rem;    
+                        }
+                    
+                        @media(min-width: 800px) {
+                            width: $IconFooterWigth - 0.5rem;
+                            height: $IconFooterHeight - 0.5rem;   
+                        }
+
+                        color: $color_redes;
+                        &:hover{
+                            color: $color_chage_redes;
+                        }
                     }
 
                     .instagram,
                     .youtube {
-                        width: $IconFooterWigth;
-                        height: $IconFooterHeight;
+                     
+                        @media(max-width: 300px) {
+                            width: $IconFooterWigth - 1.2rem;
+                            height: $IconFooterHeight - 1.2rem;  
+                        }
+                        @media(max-width: 400px) and (min-width: 300px) {
+                            width: $IconFooterWigth - 1rem;
+                            height: $IconFooterHeight - 1rem;   
+                         }
+    
+                        @media(max-width: 500px) and (min-width: 400px) {
+                            width: $IconFooterWigth - 0.7rem;
+                            height: $IconFooterHeight - 0.7rem;   
+                         }
+                    
+                        @media(max-width: 600px) and (min-width: 500px) {
+                            width: $IconFooterWigth - 0.5rem;
+                            height: $IconFooterHeight - 0.5rem;    
+                         }
+                    
+                        @media(max-width: 800px) and (min-width: 600px) {
+                            width: $IconFooterWigth - 0.2rem;
+                            height: $IconFooterHeight - 0.2rem;    
+                        }
+                    
+                        @media(min-width: 800px) {
+                            width: $IconFooterWigth;
+                            height: $IconFooterHeight;   
+                        }
+
+                        color: $color_redes;
+                        &:hover{
+                            color: $color_chage_redes;
+                        }
                     }
 
                 }
