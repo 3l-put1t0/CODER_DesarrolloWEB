@@ -43,12 +43,12 @@
     height: 620px;
   }
 }
-@media (max-width: 360px) and (min-width: 350px) {
+@media (max-width: 365px) and (min-width: 350px) {
   .content .art_1 .backgroung-img_1 {
-    height: 600px;
+    height: 620px;
   }
 }
-@media (max-width: 450px) and (min-width: 360px) {
+@media (max-width: 450px) and (min-width: 365px) {
   .content .art_1 .backgroung-img_1 {
     height: 580px;
   }
@@ -269,12 +269,12 @@
     height: 620px;
   }
 }
-@media (max-width: 360px) and (min-width: 350px) {
+@media (max-width: 365px) and (min-width: 350px) {
   .content .art_2 .backgroung-img_2 {
-    height: 600px;
+    height: 620px;
   }
 }
-@media (max-width: 450px) and (min-width: 360px) {
+@media (max-width: 450px) and (min-width: 365px) {
   .content .art_2 .backgroung-img_2 {
     height: 580px;
   }
@@ -495,12 +495,12 @@
     height: 620px;
   }
 }
-@media (max-width: 360px) and (min-width: 350px) {
+@media (max-width: 365px) and (min-width: 350px) {
   .content .art_3 .backgroung-img_3 {
-    height: 600px;
+    height: 620px;
   }
 }
-@media (max-width: 450px) and (min-width: 360px) {
+@media (max-width: 450px) and (min-width: 365px) {
   .content .art_3 .backgroung-img_3 {
     height: 580px;
   }
@@ -721,12 +721,12 @@
     height: 620px;
   }
 }
-@media (max-width: 360px) and (min-width: 350px) {
+@media (max-width: 365px) and (min-width: 350px) {
   .content .art_4 .backgroung-img_4 {
-    height: 600px;
+    height: 620px;
   }
 }
-@media (max-width: 450px) and (min-width: 360px) {
+@media (max-width: 450px) and (min-width: 365px) {
   .content .art_4 .backgroung-img_4 {
     height: 580px;
   }
