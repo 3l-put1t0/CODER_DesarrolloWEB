@@ -10,30 +10,47 @@
     //Colores del navegador
         $color_body: rgb(49, 49, 49);
         $color_title: white;
-        $color_logo: rgb(233, 11, 11);
-        $color_menu: white;
+        $color_menu: rgb(76, 69, 69);
+        $color_menu_letter: white;
+        $color_change_logo: red;
         $color_change_menu: rgb(60, 63, 46);
         $color_parrafos: white;
     //Colores del cuerpo princial
+        $color_shadow_ima: rgb(208, 212, 171);
     //Colores del contenido
         $color_title_arti: white;
+        $color_logo: rgb(233, 11, 11);
     //Colores del Footer
+        $color_foooter: red;
         $color_autor: rgb(155, 154, 154);
-        $color_redes: white;
+        $color_Change_autor: rgb(255, 255, 255);
+        $color_redes: rgb(224, 226, 232);
+        $color_chage_redes: rgb(40, 40, 49);
 //*********FUENTE**************
     //Family 
         $FontFamily: 'Roboto', sans-serif;
+        $FontFamilyAutor: 'Press Start 2P', cursive;
     //Fuente Navegador
-        $FontSize_Title: 700%;
-        $FontSize_list: 200%;
+        $FontSize_Title: 10rem;
+        $FontSize_list: 1.9rem;
     //Fuente contenido
         $FontSize_TitleArt: 400%;
     //Fuente Footer
-        $FontAutor: 100%;
-        $IconFooterWigth: 300%;
-        $IconFooterHeight: 150%;
+        $FontAutor: 1.3rem;
+        $IconFooterWigth: 4rem;
+        $IconFooterHeight: 4rem;
         $FontSizeRedes: 150%;
 //*****************CONTENIDO******************
-    //Tamaño_Parafo
-        $FontSize_Parra: 150%;
+    //Tamaño_Parafo--Pagina Principal
+        $FontSize_Parra1: 150%;
+        $FontSize_Parra: 1.8rem;
+    //Tamaño_Parafo--Paginas segundarios
+        $FontSize_Parra_Se: 3rem;
+    //***********COMODIN*************
+        $colorComodin: white;
+        $color_shadow_ico: rgb(238, 144, 144);
+        $backGround_Color: black;
+        $backGround_Change_Color: rgb(255, 0, 0);
+        $color_border: white;
+    
 

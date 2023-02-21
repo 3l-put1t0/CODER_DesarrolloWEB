@@ -1,0 +1,338 @@
+@import "./utilities/variables";
+@import "./utilities/reset";
+@import "./utilities/fontSize";
+
+.content  {
+    grid-area: content;
+    display: grid;
+    grid-template-rows: auto 3%;
+    grid-template-areas:
+        "info"
+        "como";   
+    background-color: rgba(255, 0, 0, 0);
+    // height: 220rem;
+    // @media(max-width: 600px) {
+    //     height: 220rem;
+    // }
+
+    // @media(max-width: 700px) and (min-width: 600px) {
+    //     height: 220rem;
+    // }
+    @media(max-width: 300px){
+        height: 172rem;
+    }
+
+    @media(max-width: 330px) and (min-width: 300px) {
+        height: 188rem;
+    }
+
+    @media(max-width: 360px) and (min-width: 330px) {
+        height: 182rem;
+    }
+
+    @media(max-width: 420px) and (min-width: 360px) {
+        height: 180rem;
+    }
+
+    @media(max-width: 480px) and (min-width: 420px) {
+        height: 174rem;
+    }
+
+    @media(max-width: 500px) and (min-width: 480px) {
+        height: 160rem;
+    }
+    @media(max-width: 520px) and (min-width: 500px) {
+            height: 168rem;
+          
+    } 
+
+    @media(max-width: 700px) and (min-width: 520px) {
+        height: 166rem;
+    }
+
+    @media(min-width: 700px) {
+        height: 220rem;
+    }
+
+
+
+    .blackground_img {
+        grid-area: info;
+        width: 100%;
+        // height: 220rem;    
+        // @media(max-width: 600px) {
+        //     height: 220rem;
+        // }
+        @media(max-width: 300px){
+            height: 172rem;
+        }
+    
+        @media(max-width: 330px) and (min-width: 300px) {
+            height: 188rem;
+        }
+    
+        @media(max-width: 360px) and (min-width: 330px) {
+            height: 182rem;
+        }
+    
+        @media(max-width: 420px) and (min-width: 360px) {
+            height: 180rem;
+        }
+    
+        @media(max-width: 480px) and (min-width: 420px) {
+            height: 174rem;
+        }
+    
+        @media(max-width: 500px) and (min-width: 480px) {
+            height: 160rem;
+            
+        }
+        @media(max-width: 520px) and (min-width: 500px) {
+            height: 168rem;
+          
+        }    
+        @media(max-width: 700px) and (min-width: 520px) {
+            height: 170rem;
+          
+        }
+    
+        @media(min-width: 700px) {
+            height: 220rem;
+             
+        }
+        background-size: cover; 
+
+        background-image: url("../imagenes/Editadas/IronMaiden/Iron-Maiden-Piece-Of-mind.png");// url("../imagenes/Editadas/IronMaiden/Killer.jpg");
+        
+        position: relative;
+       
+        &::after{
+            position: absolute;
+            content: '';
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        // @media(max-width: 700px){
+        //     background-size: contain;   
+        // }
+    
+        // @media(min-width: 700px) { 
+        //     background-size: cover;   
+        // }
+        
+        background-attachment: fixed;//, scroll;
+        background-repeat: no-repeat;//, repeat-y;
+        // background-repeat: no-repeat;
+        // filter: grayscale(0.5);
+        // z-index: inherit;
+        
+
+        .content_art {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 2;
+            // display: flex;
+            // flex-direction: column;
+            display: grid;
+            grid-template-rows: repeat(4 auto);
+            grid-template-areas:
+                "art1"
+                "art2"
+                "art3"
+                "art4";
+            align-items: center;
+
+            @for $i from 1 through 4 {
+                .art_#{$i} {
+                    grid-area: art#{$i};
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .img_#{$i} {
+
+                        border-radius: 50%;
+                        // background-color: rgb(250, 250, 250);
+                        background-image: url("../imagenes/Editadas/IronMaiden/iron-maiden-powerslave.jpeg");
+                        object-fit: contain;
+                    }
+
+                    // p{
+                    //     font-size: 400%;
+                    //     font-family: $FontFamily;
+                    //     color: azure;
+                    //     text-align: center;
+                    // }
+                }
+            }
+        }
+
+    }
+
+ 
+
+    .comodin {
+        grid-area: como;
+        background-color: $backGround_Color;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0 1rem 0;
+        z-index: 2;
+
+        .cont_ico {
+            width: 4rem;
+            height: 4rem;
+            margin-top: 1%;
+            margin-bottom: 1%;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background-color: $backGround_Color;
+            border: 0.2rem solid $backGround_Color;
+
+
+            &:hover {
+                background-color: $backGround_Change_Color;
+                border: 0.2rem solid $color_border;
+                box-shadow: 0 0 2rem $color_shadow_ico;
+                .iconify {
+                    width: 100%;
+                    height: 100%;
+                }
+                width: 6rem;
+                height: 6rem;
+                // .iconify{
+                //     // width: 90%;
+                //     //height: 90%;
+                // }
+             
+                transition: 1s;
+            }
+
+            .iconify {
+                width: 100%;
+                height: 100%;
+            }
+
+        }
+    }
+
+    // grid-template-rows: repeat(4 auto) 5%;
+    // grid-template-areas:
+    //     "art1"
+    //     "art2"
+    //     "art3"
+    //     "art4"
+    //     "como";
+
+    // height: auto;
+
+
+
+    //End backGround
+
+
+    // @for $i from 1 through 4 {
+    //     .art_#{$i} {
+    //         grid-area: art#{$i};
+    //         height: auto;
+    //         display: flex;
+    //         flex-direction: column;
+    //         align-content: center;
+    //         z-index: 2;
+    //         background-color: rgba(165, 42, 42);
+    //     }
+    // }
+
+    // .comodin {
+    //     grid-area: como;
+    //     height: auto;
+
+    //     .ico {
+    //         width: 20%;
+    //         height: 20%;
+
+    //     }
+    // }
+}
+
+.imgs {
+
+    margin-top: 5%;
+    box-shadow: 0 0 5rem $color_shadow_ima;
+
+    @media(max-width: 600px) {
+        width: 27rem - 10rem;
+        height: 27rem - 10rem;
+    }
+
+    @media(max-width: 800px) and (min-width: 600px) {
+        width: 27rem - 5rem;
+        height: 27rem - 5rem;
+    }
+
+    @media(max-width: 1000px) and (min-width: 800px) {
+        width: 27rem - 5rem;
+        height: 27rem - 5rem;
+    }
+
+    @media(min-width: 1000px) {
+        width: 27rem;
+        height: 27rem;
+    }
+}
+
+p {
+    font-size: 400%;
+    font-family: $FontFamily;
+    color: azure;
+    text-align: center;
+    padding: 0 5%;
+
+    @media(max-width: 400px) {
+        font-size: $FontSize_Parra_Se - 1.2rem;   
+    }
+
+    @media(max-width: 500px) and (min-width: 400px) {
+        font-size: $FontSize_Parra_Se - 1.1rem;   
+    }
+
+    @media(max-width: 800px) and (min-width: 500px) {
+        font-size: $FontSize_Parra_Se - 1rem;   
+    }
+
+    @media(max-width: 1000px) and (min-width: 800px) {
+        font-size: $FontSize_Parra_Se - 0.5rem;   
+    }
+
+    @media(min-width: 1000px) {
+        font-size: $FontSize_Parra_Se;   
+    }
+}
+
+
+
+
+//End content
+
+
+// .blackground_img {
+//     height: 100vh;
+//     width: 100%;
+//     background-image: url("../imagenes/Editadas/IronMaiden/Iron-Maiden-Piece-Of-mind.png");
+//     background-size: cover;
+//     background-repeat: no-repeat;
+
+// }

@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700;900&family=Playfair+Display:wght@400;500&family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,500;0,900;1,100&family=Vidaloka&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(49, 49, 49);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.content {
+  grid-area: content;
+  display: grid;
+  grid-template-rows: auto 3%;
+  grid-template-areas: "info" "como";
+  background-color: rgba(255, 0, 0, 0);
+}
+@media (max-width: 300px) {
+  .content {
+    height: 172rem;
+  }
+}
+@media (max-width: 330px) and (min-width: 300px) {
+  .content {
+    height: 188rem;
+  }
+}
+@media (max-width: 360px) and (min-width: 330px) {
+  .content {
+    height: 182rem;
+  }
+}
+@media (max-width: 420px) and (min-width: 360px) {
+  .content {
+    height: 180rem;
+  }
+}
+@media (max-width: 480px) and (min-width: 420px) {
+  .content {
+    height: 174rem;
+  }
+}
+@media (max-width: 500px) and (min-width: 480px) {
+  .content {
+    height: 160rem;
+  }
+}
+@media (max-width: 520px) and (min-width: 500px) {
+  .content {
+    height: 168rem;
+  }
+}
+@media (max-width: 700px) and (min-width: 520px) {
+  .content {
+    height: 166rem;
+  }
+}
+@media (min-width: 700px) {
+  .content {
+    height: 220rem;
+  }
+}
+.content .blackground_img {
+  grid-area: info;
+  width: 100%;
+  background-size: cover;
+  background-image: url("../imagenes/Editadas/Megadeth/killing_is_my_businees.jpg");
+  position: relative;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+@media (max-width: 300px) {
+  .content .blackground_img {
+    height: 172rem;
+  }
+}
+@media (max-width: 330px) and (min-width: 300px) {
+  .content .blackground_img {
+    height: 188rem;
+  }
+}
+@media (max-width: 360px) and (min-width: 330px) {
+  .content .blackground_img {
+    height: 182rem;
+  }
+}
+@media (max-width: 420px) and (min-width: 360px) {
+  .content .blackground_img {
+    height: 180rem;
+  }
+}
+@media (max-width: 480px) and (min-width: 420px) {
+  .content .blackground_img {
+    height: 174rem;
+  }
+}
+@media (max-width: 500px) and (min-width: 480px) {
+  .content .blackground_img {
+    height: 160rem;
+  }
+}
+@media (max-width: 520px) and (min-width: 500px) {
+  .content .blackground_img {
+    height: 168rem;
+  }
+}
+@media (max-width: 700px) and (min-width: 520px) {
+  .content .blackground_img {
+    height: 166rem;
+  }
+}
+@media (min-width: 700px) {
+  .content .blackground_img {
+    height: 220rem;
+  }
+}
+.content .blackground_img::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.content .blackground_img .content_art {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  display: grid;
+  grid-template-rows: repeat(4 auto);
+  grid-template-areas: "art1" "art2" "art3" "art4";
+  align-items: center;
+}
+.content .blackground_img .content_art .art_1 {
+  grid-area: art1;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content .blackground_img .content_art .art_1 .img_1 {
+  border-radius: 50%;
+  background-image: url("#");
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.content .blackground_img .content_art .art_2 {
+  grid-area: art2;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content .blackground_img .content_art .art_2 .img_2 {
+  border-radius: 50%;
+  background-image: url("#");
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.content .blackground_img .content_art .art_3 {
+  grid-area: art3;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content .blackground_img .content_art .art_3 .img_3 {
+  border-radius: 50%;
+  background-image: url("#");
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.content .blackground_img .content_art .art_4 {
+  grid-area: art4;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content .blackground_img .content_art .art_4 .img_4 {
+  border-radius: 50%;
+  background-image: url("#");
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.content .comodin {
+  grid-area: como;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 1rem 0;
+  z-index: 2;
+}
+.content .comodin .cont_ico {
+  width: 4rem;
+  height: 4rem;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: black;
+  border: 0.2rem solid black;
+}
+.content .comodin .cont_ico:hover {
+  background-color: rgb(255, 0, 0);
+  border: 0.2rem solid white;
+  box-shadow: 0 0 2rem rgb(238, 144, 144);
+  width: 6rem;
+  height: 6rem;
+  transition: 1s;
+}
+.content .comodin .cont_ico:hover .iconify {
+  width: 100%;
+  height: 100%;
+}
+.content .comodin .cont_ico .iconify {
+  width: 100%;
+  height: 100%;
+}
+
+.imgs {
+  margin-top: 5%;
+  box-shadow: 0 0 5rem rgb(208, 212, 171);
+}
+@media (max-width: 600px) {
+  .imgs {
+    width: 17rem;
+    height: 17rem;
+  }
+}
+@media (max-width: 800px) and (min-width: 600px) {
+  .imgs {
+    width: 22rem;
+    height: 22rem;
+  }
+}
+@media (max-width: 1000px) and (min-width: 800px) {
+  .imgs {
+    width: 22rem;
+    height: 22rem;
+  }
+}
+@media (min-width: 1000px) {
+  .imgs {
+    width: 27rem;
+    height: 27rem;
+  }
+}
+
+p {
+  font-size: 400%;
+  font-family: "Roboto", sans-serif;
+  color: azure;
+  text-align: center;
+  padding: 0 5%;
+}
+@media (max-width: 400px) {
+  p {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 500px) and (min-width: 400px) {
+  p {
+    font-size: 1.9rem;
+  }
+}
+@media (max-width: 800px) and (min-width: 500px) {
+  p {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 1000px) and (min-width: 800px) {
+  p {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 1000px) {
+  p {
+    font-size: 3rem;
+  }
+}/*# sourceMappingURL=Sheet2_Style.css.map */
